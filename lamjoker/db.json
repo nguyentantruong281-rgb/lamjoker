@@ -1,0 +1,99 @@
+{
+  "products": [
+    { 
+      "id": 1, 
+      "name": "Iphone 14", 
+      "price": 20000000, 
+      "image": "img/iphone.jpg", 
+      "category": "điện thoại", 
+      "hot": true,
+      "description": "iPhone 14 với thiết kế sang trọng, chip A15 Bionic mạnh mẽ, camera kép 12MP cho hình ảnh sắc nét." 
+    },
+    { 
+      "id": 2, 
+      "name": "Samsung S23", 
+      "price": 18000000, 
+      "image": "img/samsung.jpg", 
+      "category": "điện thoại", 
+      "hot": false,
+      "description": "Samsung Galaxy S23 với màn hình Dynamic AMOLED 2X, hiệu năng mạnh mẽ, chụp đêm xuất sắc." 
+    },
+    { 
+      "id": 3, 
+      "name": "Xiaomi 13", 
+      "price": 15000000, 
+      "image": "img/xiaomi.jpg", 
+      "category": "điện thoại", 
+      "hot": false,
+      "description": "Xiaomi 13 trang bị chip Snapdragon 8 Gen 2, camera Leica, pin bền bỉ cùng sạc nhanh 120W." 
+    },
+    { 
+      "id": 4, 
+      "name": "Vivo X30", 
+      "price": 7000000, 
+      "image": "img/vivo.jpg", 
+      "category": "điện thoại", 
+      "hot": false,
+      "description": "Vivo X30 giá rẻ với màn hình lớn, cụm 3 camera sau, pin trâu đáp ứng nhu cầu giải trí cơ bản." 
+    },
+    { 
+      "id": 5, 
+      "name": "Macbook Pro 2023", 
+      "price": 55000000, 
+      "image": "img/macbook.jpg", 
+      "category": "laptop", 
+      "hot": true,
+      "description": "Macbook Pro 2023 chạy chip Apple M2 Pro, hiệu năng cực mạnh, màn Liquid Retina XDR đẳng cấp." 
+    },
+    { 
+      "id": 6, 
+      "name": "Dell XPS 13", 
+      "price": 35000000, 
+      "image": "img/dell.jpg", 
+      "category": "laptop", 
+      "hot": false,
+      "description": "Dell XPS 13 thiết kế siêu mỏng nhẹ, màn hình InfinityEdge 13.4 inch, pin lâu và hiệu năng ổn định." 
+    },
+    { 
+      "id": 7, 
+      "name": "Asus Zenbook", 
+      "price": 25000000, 
+      "image": "img/asus.jpg", 
+      "category": "laptop", 
+      "hot": false,
+      "description": "Asus Zenbook với thiết kế hiện đại, màn OLED sắc nét, hiệu suất tối ưu cho công việc và giải trí." 
+    },
+    { 
+      "id": 8, 
+      "name": "HP Envy", 
+      "price": 20000000, 
+      "image": "img/hp.jpg", 
+      "category": "laptop", 
+      "hot": false,
+      "description": "HP Envy sang trọng với màn hình viền mỏng, âm thanh Bang & Olufsen, pin khỏe phục vụ học tập và làm việc." 
+    }
+  ],
+  "users": [
+    { 
+      "id": 1, 
+      "name": "Nguyễn Văn A", 
+      "email": "vana@example.com", 
+      "password": "123456", 
+      "role": "customer" 
+    },
+    { 
+      "id": 2, 
+      "name": "Trần Thị B", 
+      "email": "thib@example.com", 
+      "password": "654321", 
+      "role": "customer" 
+    },
+    { 
+      "id": 3, 
+      "name": "Admin", 
+      "email": "admin@example.com", 
+      "password": "admin123", 
+      "role": "admin" 
+    }
+  ]
+}

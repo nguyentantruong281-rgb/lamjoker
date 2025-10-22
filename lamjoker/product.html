@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tất cả sản phẩm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="logo"><span class="logo-mark"></span> Shop bán điện thoại</div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="admin.html" class="nav-link">Admin</a>
+        <a href="product.html" class="nav-link">Sản phẩm</a>
+        <div class="nav-right">
+          <button class="btn-auth" onclick="openModal('login')">Đăng nhập</button>
+          <a href="cart.html" class="cart-btn">🛒 <span id="cart-count">0</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h4 class="page-title">Danh sách sản phẩm</h4>
+
+    <div class="filter-bar">
+      <input type="text" id="search-input" placeholder="🔍 Tìm kiếm sản phẩm...">
+      <select id="sort-price">
+        <option value="">Sắp xếp theo giá</option>
+        <option value="asc">Giá tăng dần</option>
+        <option value="desc">Giá giảm dần</option>
+      </select>
+    </div>
+
+    <div id="all-product" class="product-grid"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Liên kết nhanh</h3>
+        <hr>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="product.html">Sản phẩm</a></li>
+          <li><a href="about.html">Về chúng tôi</a></li>
+          <li><a href="news.html">Tin tức</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Liên hệ</h3>
+        <hr>
+        <p><strong>Địa chỉ:</strong> 684 Hậu Giang , Quận 6, TP. HCM</p>
+        <p><strong>Email:</strong> shoplamcongnghe@gmail.com</p>
+        <p><strong>SĐT:</strong> 0909364733 </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Theo dõi chúng tôi</h3>
+        <hr>
+        <ul class="social-links">
+          <li><i class="fab fa-facebook"></i> Facebook</li>
+          <li><i class="fab fa-instagram"></i> Instagram</li>
+          <li><i class="fab fa-twitter"></i> Shopee</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Shop bán điện thoại - All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quản lý sản phẩm (Admin)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="logo">🛠️ Quản trị Admin</div>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="product.html" class="nav-link">Sản phẩm</a>
+        <a href="admin.html" class="nav-link">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Quản lý sản phẩm</h2>
+
+    <!-- Form thêm/sửa -->
+    <form id="productForm" style="background:#fff;color:#222;padding:20px;border-radius:10px;margin-bottom:30px">
+      <input type="hidden" id="productId">
+      <div style="margin-bottom:10px">
+        <label><b>Tên sản phẩm:</b></label><br>
+        <input type="text" id="name" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc">
+      </div>
+      <div style="margin-bottom:10px">
+        <label><b>Giá:</b></label><br>
+        <input type="number" id="price" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc">
+      </div>
+      <div style="margin-bottom:10px">
+        <label><b>Ảnh (URL):</b></label><br>
+        <input type="text" id="image" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc">
+      </div>
+      <div style="margin-bottom:10px">
+        <label><b>Loại:</b></label><br>
+        <input type="text" id="category" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc">
+      </div>
+      <div style="margin-bottom:10px">
+        <label><b>Mô tả:</b></label><br>
+        <textarea id="description" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn-add">Lưu sản phẩm</button>
+    </form>
+
+    <hr style="margin:30px 0;border:1px solid #334">
+
+    <!-- Danh sách sản phẩm -->
+    <table border="1" width="100%" id="productTable" style="background:#fff;color:#222;border-collapse:collapse;text-align:left">
+      <thead style="background:#4f7cff;color:#fff">
+        <tr>
+          <th style="padding:8px">ID</th>
+          <th>Tên</th>
+          <th>Giá</th>
+          <th>Ảnh</th>
+          <th>Loại</th>
+          <th>Mô tả</th>
+          <th>Hành động</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© 2025 Shop bán điện thoại - All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>

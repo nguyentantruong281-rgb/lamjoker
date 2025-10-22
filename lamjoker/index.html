@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop - Trang chủ</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="logo"><span class="logo-mark"></span> Shop bán điện thoại</div>
+      <input id="searchInput" type="text" placeholder="Tìm kiếm sản phẩm" />
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="admin.html" class="nav-link">Admin</a>
+        <a href="#" class="nav-link">Tin tức</a>
+        <a href="product.html" class="nav-link">Sản phẩm</a>
+        <div class="nav-right">
+          <button class="btn-auth" onclick="openModal('login')">Đăng nhập</button>
+          <a href="cart.html" class="cart-btn">🛒 <span id="cart-count">0</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="container">
+      <!-- Banner / Slider -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="carousel" id="carousel">
+            <div class="slide"><img src="img/banner1.jpg" alt="banner1"></div>
+            <div class="slide"><img src="img/banner2.jpg" alt="banner2"></div>
+            <div class="slide"><img src="img/banner3.jpg" alt="banner3"></div>
+          </div>
+
+          <button class="carousel-arrow left" id="prev">‹</button>
+          <button class="carousel-arrow right" id="next">›</button>
+
+          <div class="carousel-dots" id="dots"></div>
+        </div>
+      </section>
+
+      <!-- Sản phẩm nổi bật -->
+      <section class="section">
+        <h2 class="section-title">Sản phẩm nổi bật</h2>
+        <div id="product-hot" class="product-grid"></div>
+      </section>
+
+      <!-- Sản phẩm laptop -->
+      <section class="section">
+        <h2 class="section-title">Sản phẩm laptop</h2>
+        <div id="product-laptop" class="product-grid"></div>
+      </section>
+
+      <!-- Sản phẩm điện thoại -->
+      <section class="section">
+        <h2 class="section-title">Sản phẩm điện thoại</h2>
+        <div id="product-dienthoai" class="product-grid"></div>
+      </section>
+    </div>
+  </main>
+   <!-- ============ FORM LOGIN / REGISTER ============ -->
+  <div id="auth-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+
+      <div id="login-form">
+        <h2>Đăng nhập</h2>
+        <input type="email" id="login-email" placeholder="Email">
+        <input type="password" id="login-password" placeholder="Mật khẩu">
+        <button onclick="loginUser()">Đăng nhập</button>
+        <p>Chưa có tài khoản? <a href="#" onclick="switchForm('register')">Đăng ký ngay</a></p>
+      </div>
+
+      <div id="register-form" class="hidden">
+        <h2>Đăng ký</h2>
+        <input type="text" id="register-name" placeholder="Họ và tên">
+        <input type="email" id="register-email" placeholder="Email">
+        <input type="password" id="register-password" placeholder="Mật khẩu">
+        <button onclick="registerUser()">Đăng ký</button>
+        <p>Đã có tài khoản? <a href="#" onclick="switchForm('login')">Đăng nhập</a></p>
+      </div>
+    </div>
+  </div>
+
+   <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Liên kết nhanh</h3>
+        <hr>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="product.html">Sản phẩm</a></li>
+          <li><a href="about.html">Admin</a></li>
+          <li><a href="news.html">Tin tức</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Liên hệ</h3>
+        <hr>
+        <p><strong>Địa chỉ:</strong> 684 Hậu Giang , Quận 6, TP. HCM</p>
+        <p><strong>Email:</strong> shoplamcongnghe@gmail.com</p>
+        <p><strong>SĐT:</strong> 0909364733 </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Theo dõi chúng tôi</h3>
+        <hr>
+        <ul class="social-links">
+          <li><i class="fab fa-facebook"></i> Facebook</li>
+          <li><i class="fab fa-instagram"></i> Instagram</li>
+          <li><i class="fab fa-twitter"></i> Shopee</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 SHop bán điện thoại - All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ******** Firebase SDK (compat) - MUST load before firebase.js and main.js ******** -->
+  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+
+  <!-- our firebase helpers (init + auth functions) -->
+  <script src="firebase.js"></script>
+
+  <script src="cart.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
